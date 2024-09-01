@@ -82,6 +82,14 @@ function handleNumber(numberString){
     }
 }
 
+// background.ts
+
+(async () => {
+    const storage = new Storage({ area: "session" })
+    const extStorageApi = storage.getExtStorageApi()
+    await extStorageApi.session.setAccessLevel({ accessLevel: "TRUSTED_AND_UNTRUSTED_CONTEXTS" })
+  })()
+
 function init(){
     document.querySelector('.calc-buttons').addEventListener('click', function(event){
         buttonClick(event.target.innerText);        
