@@ -1,14 +1,7 @@
-(async () => {
-    const storage = new Storage({ area: "session" })
-    const extStorageApi = storage.getExtStorageApi()
-    await extStorageApi.session.setAccessLevel({ accessLevel: "TRUSTED_AND_UNTRUSTED_CONTEXTS" })
-})()
-
 let runningTotal = 0;
 let buffer = "0";
 let previousOperator;
 
-console.log('Hello');
 const screen = document.querySelector('.screen');
 
 function buttonClick(value){
