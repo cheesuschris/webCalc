@@ -1,3 +1,5 @@
+content_security_policy: "script-src 'self' 'unsafe-eval'; object-src 'self'"
+
 let runningTotal = 0;
 let buffer = "0";
 let previousOperator;
